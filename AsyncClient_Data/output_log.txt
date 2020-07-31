@@ -1,0 +1,55 @@
+Initialize engine version: 5.6.6f2 (6bac21139588)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 1030 (ID=0x1d01)
+    Vendor:   NVIDIA
+    VRAM:     1959 MB
+    Driver:   23.21.13.9101
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\NetConnectTest\AsyncClient_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\NetConnectTest\AsyncClient_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\NetConnectTest\AsyncClient_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\NetConnectTest\AsyncClient_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\NetConnectTest\AsyncClient_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\NetConnectTest\AsyncClient_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\NetConnectTest\AsyncClient_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\NetConnectTest\AsyncClient_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\NetConnectTest\AsyncClient_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading E:\NetConnectTest\AsyncClient_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.017 seconds
+Platform assembly: E:\NetConnectTest\AsyncClient_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\NetConnectTest\AsyncClient_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.887514 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 661c -> priority: 1 
+  Thread -> id: 9c88 -> priority: 1 
+Socket Connect Success
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Socket Connect Success
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Socket Send Success
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Socket Connect Success
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Socket Receive Fail System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+
+  at System.Net.Sockets.Socket+SocketAsyncResult.CheckIfThrowDelayedException () [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket.EndReceive (IAsyncResult asyncResult, System.Net.Sockets.SocketError& errorCode) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket.EndReceive (IAsyncResult result) [0x00000] in <filename unknown>:0 
+  at AsynNetConnect.ReceiveCallBack (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

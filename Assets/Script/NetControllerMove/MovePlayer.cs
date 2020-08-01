@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MovePlayer : MoveBase
 {
+    private void Start()
+    {
+        int type = (int)NetType.EnterSence;
+        string message = type.ToString() + "," + "Cube";
+        MoveNetManager.GetInstance().SendMessage(message);
+    }
 
     new void Update()
     {
@@ -18,5 +24,14 @@ public class MovePlayer : MoveBase
                 SetTarget(hit.point);
             }
         }
+    }
+
+
+    public void SendPostion(Vector3 pos)
+    {
+        int type = (int) NetType.Move;
+        string posStr = pos.x.ToString() + '.' + pos.y.ToString() + '.' + pos.z.ToString();
+        string message = type.ToString() + "," + posStr;
+        MoveNetManager .GetInstance().SendMessage(message);
     }
 }

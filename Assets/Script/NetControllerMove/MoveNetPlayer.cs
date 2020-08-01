@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveNetPlayer : MonoBehaviour {
+public class MoveNetPlayer : MoveBase {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void SetNetPostion(Vector3 pos)
+    {
+        SetTarget(pos);
+    }
 }

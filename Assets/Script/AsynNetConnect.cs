@@ -80,7 +80,7 @@ public class AsynNetConnect : MonoBehaviour {
         try
         {
             Socket socket = (Socket) ar.AsyncState;
-            socket.EndConnect(ar);
+            socket.EndSend(ar);
             Debug.Log("Socket Send Success");
         }
         catch (SocketException s)

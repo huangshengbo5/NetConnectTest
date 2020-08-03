@@ -12,6 +12,7 @@ namespace NetServer
     class ClientState
     {
         public Socket socket;
+        public string Guid;
         public byte[] readBuff = new Byte [1024];
     }
     class Program
@@ -47,6 +48,13 @@ namespace NetServer
 
                 ClientState clientState = new ClientState();
                 clientState.socket = clientSocket;
+                clientState.Guid = Guid.NewGuid().ToString("N") + "0";
+                clientSocket.Send(System.Text.Encoding.Default.GetBytes(clientState.Guid));
+                foreach (var client in ClientStates)
+                {
+                    string message = "1,Cube";
+                    clientSocket.Send(System.Text.Encoding.Default.GetBytes(message));
+                }
                 ClientStates.Add(clientSocket, clientState);
                 clientSocket.BeginReceive(clientState.readBuff, 0, 1024, 0, ReceiveCallBack, clientState);
                 Console.WriteLine("[Server] Accept Success");
@@ -72,16 +80,12 @@ namespace NetServer
                     ClientStates.Remove(clientSocket);
                     return;
                 }
-
-                string ipStr = clientState.socket.RemoteEndPoint.ToString() + ":";
                 string receiveStr = System.Text.Encoding.Default.GetString(clientState.readBuff, 0, count);
-                receiveStr = ipStr + receiveStr;
                 byte[] sendBytes = System.Text.Encoding.Default.GetBytes(receiveStr);
                 foreach (var item in ClientStates)
                 {
                     item.Key.Send(sendBytes);
                 }
-                //clientSocket.Send(sendBytes);
                 clientSocket.BeginReceive(clientState.readBuff, 0, 1024, 0, ReceiveCallBack, clientState);
             }
             catch (SocketException e)
@@ -121,7 +125,4 @@ namespace NetServer
             }
         }
     }
-
-
-    
 }

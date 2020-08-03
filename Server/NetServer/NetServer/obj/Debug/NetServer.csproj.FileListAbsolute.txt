@@ -3,3 +3,8 @@ d:\documents\visual studio 2012\Projects\NetServer\NetServer\bin\Debug\NetServer
 d:\documents\visual studio 2012\Projects\NetServer\NetServer\obj\Debug\NetServer.csprojResolveAssemblyReference.cache
 d:\documents\visual studio 2012\Projects\NetServer\NetServer\obj\Debug\NetServer.exe
 d:\documents\visual studio 2012\Projects\NetServer\NetServer\obj\Debug\NetServer.pdb
+E:\NetConnectTest\Server\NetServer\NetServer\obj\Debug\NetServer.exe
+E:\NetConnectTest\Server\NetServer\NetServer\obj\Debug\NetServer.pdb
+E:\NetConnectTest\Server\NetServer\NetServer\bin\Debug\NetServer.exe
+E:\NetConnectTest\Server\NetServer\NetServer\bin\Debug\NetServer.pdb
+E:\NetConnectTest\Server\NetServer\NetServer\obj\Debug\NetServer.csprojResolveAssemblyReference.cache

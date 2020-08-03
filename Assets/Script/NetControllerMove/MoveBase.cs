@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
-using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class MoveBase : MonoBehaviour
@@ -21,6 +20,7 @@ public class MoveBase : MonoBehaviour
             Vector3 value =  Vector3.Normalize(vecTarget-myPos);
            transform.position =myPos + value * fSpeed * Time.deltaTime;
         }
+
     }
 
     public void SetTarget(Vector3 pos)

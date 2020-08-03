@@ -6,9 +6,7 @@ public class MovePlayer : MoveBase
 {
     private void Start()
     {
-        int type = (int)NetType.EnterSence;
-        string message = type.ToString() + "," + "Cube";
-        MoveNetManager.GetInstance().SendMessage(message);
+        MoveNetManager.GetInstance().StartConnect();
     }
 
     new void Update()
@@ -22,6 +20,7 @@ public class MovePlayer : MoveBase
             if (hit.collider.tag == "Land")
             {
                 SetTarget(hit.point);
+                SendPostion(hit.point);
             }
         }
     }

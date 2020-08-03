@@ -80,6 +80,8 @@
   <ItemGroup>
     <Compile Include="Assets\Script\AsynNetConnect.cs" />
     <Compile Include="Assets\Script\NetConnect.cs" />
+    <Compile Include="Assets\Script\NetControllerMove\DataCore.cs" />
+    <Compile Include="Assets\Script\NetControllerMove\Main.cs" />
     <Compile Include="Assets\Script\NetControllerMove\Move.cs" />
     <Compile Include="Assets\Script\NetControllerMove\MoveBase.cs" />
     <Compile Include="Assets\Script\NetControllerMove\MoveNetManager.cs" />

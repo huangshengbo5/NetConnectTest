@@ -5,6 +5,7 @@ using System.Net;
 
 public enum NetType
 {
+    Init = 0,
     EnterSence = 1,
     Move = 2,
     LeaveSence = 3,

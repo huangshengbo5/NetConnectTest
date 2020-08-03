@@ -85,6 +85,7 @@
     <Compile Include="Assets\Script\NetControllerMove\MoveNetManager.cs" />
     <Compile Include="Assets\Script\NetControllerMove\MoveNetPlayer.cs" />
     <Compile Include="Assets\Script\NetControllerMove\MovePlayer.cs" />
+    <Compile Include="Assets\Script\NetControllerMove\Uitil.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2012\UnityVS.CSharp.targets" />
 </Project>

@@ -88,6 +88,24 @@
     <Compile Include="Assets\Script\NetControllerMove\MoveNetPlayer.cs" />
     <Compile Include="Assets\Script\NetControllerMove\MovePlayer.cs" />
     <Compile Include="Assets\Script\NetControllerMove\Uitil.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\BaseHuman.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\CtrlHuman.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\MainAccess.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\NetManager.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\SyncHuman.cs" />
+    <Compile Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\3D Models\Others\HealthItem\vAnimateUV.cs" />
+    <Compile Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\Scripts\Camera\vThirdPersonCamera.cs" />
+    <Compile Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonAnimator.cs" />
+    <Compile Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonController.cs" />
+    <Compile Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonInput.cs" />
+    <Compile Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonMotor.cs" />
+    <Compile Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vComment.cs" />
+    <Compile Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vExtensions.cs" />
+    <Compile Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vPickupItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\ThrityPart\Invector-3rdPersonController_LITE\README_Basic.txt" />
+    <None Include="Assets\ThrityPart\Stylized Nature Environment\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2012\UnityVS.CSharp.targets" />
 </Project>

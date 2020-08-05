@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetConnectTest.CSharp", "NetConnectTest.CSharp.csproj", "{EC1B836E-88D2-1A28-1B9B-CE532CEAD527}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetConnectTest.CSharp.Editor", "NetConnectTest.CSharp.Editor.csproj", "{1B8E552D-332C-7AC0-1C74-2C105F585E63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{EC1B836E-88D2-1A28-1B9B-CE532CEAD527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC1B836E-88D2-1A28-1B9B-CE532CEAD527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC1B836E-88D2-1A28-1B9B-CE532CEAD527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B8E552D-332C-7AC0-1C74-2C105F585E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B8E552D-332C-7AC0-1C74-2C105F585E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B8E552D-332C-7AC0-1C74-2C105F585E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B8E552D-332C-7AC0-1C74-2C105F585E63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

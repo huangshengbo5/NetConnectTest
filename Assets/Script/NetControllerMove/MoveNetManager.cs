@@ -104,17 +104,15 @@ public class MoveNetManager  {
             {
                 case (int)NetType.Init:
                     DataCore.GetInstance().MainPlayerGuid = strMessages[0];
-                    string strMessage = DataCore.GetInstance().MainPlayerGuid + NetType.EnterSence.ToString() + "," + "Cube";
-                    SendMessage(strMessage);
                     break;
                 case (int)NetType.EnterSence:
                     string prefavName = strMessages[2];
-                    if (NetObj == null)
-                        DataCore.GetInstance().AddObjPathList(prefavName);
+                    DataCore.GetInstance().AddObjPathList(prefavName);
                     break;
                 case (int)NetType.Move:
-                    string [] posStrs = strMessages[2].Split('.');
-                    Vector3 pos = new Vector3( int.Parse(posStrs[0]), int.Parse(posStrs[1]),int.Parse(posStrs[2]));
+                    string [] posStrs = strMessages[2].Split('/');
+                    Vector3 pos = new Vector3(float.Parse(posStrs[0]), float.Parse(posStrs[1]), float.Parse(posStrs[2]));
+                    Debug.LogError("pos"+pos);
                     DataCore.GetInstance().SetPrefabPos(pos);
                     break;
                 default:

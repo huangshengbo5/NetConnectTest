@@ -29,7 +29,7 @@ public class MovePlayer : MoveBase
     public void SendPostion(Vector3 pos)
     {
         int type = (int) NetType.Move;
-        string posStr = pos.x.ToString() + '.' + pos.y.ToString() + '.' + pos.z.ToString();
+        string posStr = pos.x.ToString() + '/' + pos.y.ToString() + '/' + pos.z.ToString();
         string message = type.ToString() + "," + posStr;
         MoveNetManager .GetInstance().SendMessage(message);
     }

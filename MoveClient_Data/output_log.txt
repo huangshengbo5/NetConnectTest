@@ -17,49 +17,14 @@ Platform assembly: E:\NetConnectTest\MoveClient_Data\Managed\UnityEngine.Network
 Loading E:\NetConnectTest\MoveClient_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\NetConnectTest\MoveClient_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading E:\NetConnectTest\MoveClient_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.018 seconds
+- Completed reload, in  0.016 seconds
 Platform assembly: E:\NetConnectTest\MoveClient_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\NetConnectTest\MoveClient_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.940712 ms
+UnloadTime: 0.913663 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3028 -> priority: 1 
-  Thread -> id: 38c4 -> priority: 1 
-System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket+SocketAsyncResult.CheckIfThrowDelayedException () [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket.EndConnect (IAsyncResult result) [0x00000] in <filename unknown>:0 
-  at MoveNetManager.ConnectCallBack (IAsyncResult ar) [0x00000] in <filename unknown>:0 
-SocketException: 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
-
-  at System.Net.Sockets.Socket.BeginSend (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags socket_flags, System.AsyncCallback callback, System.Object state) [0x00000] in <filename unknown>:0 
-  at MoveNetManager.SendNetMessage (System.String message) [0x00000] in <filename unknown>:0 
-  at MoveNetManager.SendMessage (System.String message) [0x00000] in <filename unknown>:0 
-  at MovePlayer.SendPostion (Vector3 pos) [0x00000] in <filename unknown>:0 
-  at MovePlayer.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-SocketException: 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
-
-  at System.Net.Sockets.Socket.BeginSend (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags socket_flags, System.AsyncCallback callback, System.Object state) [0x00000] in <filename unknown>:0 
-  at MoveNetManager.SendNetMessage (System.String message) [0x00000] in <filename unknown>:0 
-  at MoveNetManager.SendMessage (System.String message) [0x00000] in <filename unknown>:0 
-  at MovePlayer.SendPostion (Vector3 pos) [0x00000] in <filename unknown>:0 
-  at MovePlayer.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-SocketException: 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
-
-  at System.Net.Sockets.Socket.BeginSend (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags socket_flags, System.AsyncCallback callback, System.Object state) [0x00000] in <filename unknown>:0 
-  at MoveNetManager.SendNetMessage (System.String message) [0x00000] in <filename unknown>:0 
-  at MoveNetManager.SendMessage (System.String message) [0x00000] in <filename unknown>:0 
-  at MovePlayer.SendPostion (Vector3 pos) [0x00000] in <filename unknown>:0 
-  at MovePlayer.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
+  Thread -> id: 6004 -> priority: 1 
+  Thread -> id: 2b58 -> priority: 1 

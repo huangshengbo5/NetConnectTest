@@ -48,16 +48,18 @@ namespace NetServer
 
                 ClientState clientState = new ClientState();
                 clientState.socket = clientSocket;
-                clientState.Guid = Guid.NewGuid().ToString("N") + "0";
-                clientSocket.Send(System.Text.Encoding.Default.GetBytes(clientState.Guid));
+                clientState.Guid = Guid.NewGuid().ToString("N");
+                string contetn = clientState.Guid + ",0";
+                clientSocket.Send(System.Text.Encoding.Default.GetBytes(contetn));
                 foreach (var client in ClientStates)
                 {
-                    string message = "1,Cube";
-                    clientSocket.Send(System.Text.Encoding.Default.GetBytes(message));
+                    string message = clientState.Guid + ",1,Cube";
+                    byte[] bytes = System.Text.Encoding.Default.GetBytes(message);
+                    client.Value.socket.BeginSend(bytes, 0, bytes.Length, 0, SendCallBack, client.Key);
                 }
                 ClientStates.Add(clientSocket, clientState);
                 clientSocket.BeginReceive(clientState.readBuff, 0, 1024, 0, ReceiveCallBack, clientState);
-                Console.WriteLine("[Server] Accept Success");
+                Console.WriteLine("[Server] Accept Success Guid:" + clientState.Guid);
                 acceptSocket.BeginAccept(AcceptCallBack, acceptSocket);
             }
             catch (SocketException e)
@@ -81,10 +83,11 @@ namespace NetServer
                     return;
                 }
                 string receiveStr = System.Text.Encoding.Default.GetString(clientState.readBuff, 0, count);
+                Console.WriteLine("[Server] Receive:" + receiveStr);
                 byte[] sendBytes = System.Text.Encoding.Default.GetBytes(receiveStr);
                 foreach (var item in ClientStates)
                 {
-                    item.Key.Send(sendBytes);
+                    item.Value.socket.BeginSend(sendBytes, 0, sendBytes.Length, 0, SendCallBack, item.Key);
                 }
                 clientSocket.BeginReceive(clientState.readBuff, 0, 1024, 0, ReceiveCallBack, clientState);
             }
@@ -95,6 +98,19 @@ namespace NetServer
             }
         }
 
+        public static void SendCallBack(IAsyncResult ar)
+        {
+            try
+            {
+                Socket socket = (Socket)ar.AsyncState;
+                socket.EndSend(ar);
+            }
+            catch (SocketException e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
 
 
         //同步服务器例子

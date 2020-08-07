@@ -12,7 +12,7 @@ namespace NetServer
         public string Guid;
         public byte[] readBuff = new Byte[1024];
     }
-    static class  AsyncNet
+    static class AsyncNet
     {
         public static Dictionary<Socket, ClientState> ClientStates = new Dictionary<Socket, ClientState>();
         //异步服务器例子

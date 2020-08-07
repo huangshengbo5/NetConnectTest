@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
+using System.Reflection;
 using System.Security.AccessControl;
 
 namespace NetServer
@@ -13,18 +14,28 @@ namespace NetServer
     {
         public Socket socket;
         public  byte [] readBuff = new byte[1024];
+        public int hp = -100;
+        public float x = 0;
+        public float y = 0;
+        public float z = 0;
+        public float euly = 0;
     }
 
-    class  SelectNet
+    class Program
     {
+        static void Main(string[] args)
+        {
+            MainAccess();
+        }
+
         private static Socket listenFd;
-        static Dictionary<Socket,ClientState> clients = new Dictionary<Socket, ClientState>();
+        public static Dictionary<Socket, ClientState> clients = new Dictionary<Socket, ClientState>();
 
         public static void MainAccess()
         {
-            listenFd = new Socket(AddressFamily.InterNetwork,SocketType.Stream,ProtocolType.Tcp);
+            listenFd = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPAddress ipAdr = IPAddress.Parse("127.0.0.1");
-            IPEndPoint ipEnd = new IPEndPoint(ipAdr,9999);
+            IPEndPoint ipEnd = new IPEndPoint(ipAdr, 9999);
             listenFd.Bind(ipEnd);
             listenFd.Listen(0);
             Console.WriteLine("[Server] is Start");
@@ -60,11 +71,11 @@ namespace NetServer
             Console.WriteLine("Accept");
             Socket clientFd = s.Accept();
             ClientState state = new ClientState();
-            state.socket = s;
-            clients.Add(clientFd,state);
+            state.socket = clientFd;
+            clients.Add(clientFd, state);
         }
 
-        public static void ReadClientfd(Socket s)
+        public static bool ReadClientfd(Socket s)
         {
             ClientState state = clients[s];
             int count = 0;
@@ -74,6 +85,10 @@ namespace NetServer
             }
             catch (SocketException e)
             {
+                MethodInfo mei = typeof(EventHandler).GetMethod("OnDisConnect");
+                object[] ob = { state };
+                mei.Invoke(null, ob);
+
                 s.Close();
                 clients.Remove(s);
                 Console.WriteLine(e);
@@ -82,25 +97,39 @@ namespace NetServer
 
             if (count == 0)
             {
+                MethodInfo mei = typeof(EventHandler).GetMethod("OnDisConnect");
+                object[] ob = { state };
+                mei.Invoke(null, ob);
                 s.Close();
                 clients.Remove(s);
             }
 
             string receStr = System.Text.Encoding.Default.GetString(state.readBuff, 0, count);
-            byte[] sendBytes = System.Text.Encoding.Default.GetBytes(receStr);
-            foreach (var VARIABLE in clients.Values)
-            {
-                VARIABLE.socket.Send(sendBytes);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-            }
+
+            //add
+            string[] splitStrs = receStr.Split('|');
+            //add
+            Console.WriteLine("[Server] Receive:     " + receStr);
+
+            string msgName = splitStrs[0];
+            string msgArgs = splitStrs[1];
+            string funcName = "Msg" + msgName;
+            MethodInfo mi = typeof(MsgHandler).GetMethod(funcName);
+            object[] o = { state,msgArgs };
+            mi.Invoke(null, o);
+            return true;
+
+            //byte[] sendBytes = System.Text.Encoding.Default.GetBytes(receStr);
+            //foreach (var VARIABLE in clients.Keys)
+            //{
+            //    VARIABLE.Send(sendBytes);
+            //}
         }
-    }
-    class Program
-    {
-        static void Main(string[] args)
+
+        public static void Send(ClientState state ,string str)
         {
-            
+            byte[] sendMsg = System.Text.Encoding.Default.GetBytes(str);
+            state.socket.Send(sendMsg);
         }
-
-
     }
 }

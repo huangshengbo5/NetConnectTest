@@ -14,6 +14,7 @@ public class MainAccess : MonoBehaviour
 		NetManager.AddListener("Enter",OnEnter);
         NetManager.AddListener("Move",OnMove);
         NetManager.AddListener("Leave",OnLeave);
+        NetManager.AddListener("List",OnList);
         NetManager.Connect("127.0.0.1",9999);
 
         GameObject obj = Instantiate(humanPrefab);
@@ -33,6 +34,8 @@ public class MainAccess : MonoBehaviour
         sendStr += pos.z + ",";
         sendStr += eul.y;
         NetManager.Send(sendStr);
+
+        NetManager.Send("List|");
     }
 	
 	// Update is called once per frame
@@ -68,5 +71,32 @@ public class MainAccess : MonoBehaviour
     public void OnLeave(string str)
     {
         Debug.Log("OnLeave" + str);
+    }
+
+    public void OnList(string str)
+    {
+        Debug.Log("OnList:  " +str);
+        string [] split = str.Split(',');
+        int count = (split.Length - 1) / 6;
+        for (int i = 0; i < count; i++)
+        {
+            string desc = split[i * 6 + 0];
+            float x = float.Parse(split[i * 6 + 1]);
+            float y = float.Parse(split[i * 6 + 2]);
+            float z = float.Parse(split[i * 6 + 3]);
+            float eulY = float.Parse(split[i * 6 + 4]);
+            int hp = int.Parse(split[i * 6 + 5]);
+            if (desc == NetManager.GetDesc())
+            {
+                continue;
+            }
+
+            GameObject obj = Instantiate(humanPrefab);
+            obj.transform.position =  new Vector3(x,y,z);
+            obj.transform.eulerAngles = new Vector3(0,eulY,0);
+            BaseHuman otherHuman = obj.GetComponent<SyncHuman>();
+            otherHuman.desc = desc;
+            otherHumans.Add(desc, otherHuman);
+        }
     }
 }

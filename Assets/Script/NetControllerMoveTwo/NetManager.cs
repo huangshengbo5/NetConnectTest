@@ -43,6 +43,7 @@ public class NetManager
             Socket socket = (Socket)ar.AsyncState;
             int count = socket.EndReceive(ar);
             string receStr = System.Text.Encoding.Default.GetString(readBuff, 0, count);
+            Debug.Log("Receive:    " + receStr);
             msgList.Add(receStr);
             socket.BeginReceive(readBuff, 0, 1024, 0, ReceiveCallBack, socket);
         }
@@ -58,6 +59,7 @@ public class NetManager
         if (socket == null) return;
         if (!socket.Connected) return;
         byte[] sendBytes = System.Text.Encoding.Default.GetBytes(sendStr);
+        Debug.Log("Send:  " + sendStr);
         socket.Send(sendBytes);
     }
 

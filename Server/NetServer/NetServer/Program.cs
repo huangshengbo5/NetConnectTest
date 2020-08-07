@@ -12,133 +12,95 @@ namespace NetServer
     class ClientState
     {
         public Socket socket;
-        public string Guid;
-        public byte[] readBuff = new Byte [1024];
+        public  byte [] readBuff = new byte[1024];
+    }
+
+    class  SelectNet
+    {
+        private static Socket listenFd;
+        static Dictionary<Socket,ClientState> clients = new Dictionary<Socket, ClientState>();
+
+        public static void MainAccess()
+        {
+            listenFd = new Socket(AddressFamily.InterNetwork,SocketType.Stream,ProtocolType.Tcp);
+            IPAddress ipAdr = IPAddress.Parse("127.0.0.1");
+            IPEndPoint ipEnd = new IPEndPoint(ipAdr,9999);
+            listenFd.Bind(ipEnd);
+            listenFd.Listen(0);
+            Console.WriteLine("[Server] is Start");
+
+            List<Socket> checkRead = new List<Socket>();
+
+            while (true)
+            {
+                checkRead.Clear();
+                checkRead.Add(listenFd);
+                foreach (var VARIABLE in clients.Values)
+                {
+                    checkRead.Add(VARIABLE.socket);
+                }
+
+                Socket.Select(checkRead, null, null, 1000);
+                foreach (var VARIABLE in checkRead)
+                {
+                    if (VARIABLE == listenFd)
+                    {
+                        ReadListenfd(VARIABLE);
+                    }
+                    else
+                    {
+                        ReadClientfd(VARIABLE);
+                    }
+                }
+            }
+        }
+
+        public static void ReadListenfd(Socket s)
+        {
+            Console.WriteLine("Accept");
+            Socket clientFd = s.Accept();
+            ClientState state = new ClientState();
+            state.socket = s;
+            clients.Add(clientFd,state);
+        }
+
+        public static void ReadClientfd(Socket s)
+        {
+            ClientState state = clients[s];
+            int count = 0;
+            try
+            {
+                count = s.Receive(state.readBuff);
+            }
+            catch (SocketException e)
+            {
+                s.Close();
+                clients.Remove(s);
+                Console.WriteLine(e);
+                throw;
+            }
+
+            if (count == 0)
+            {
+                s.Close();
+                clients.Remove(s);
+            }
+
+            string receStr = System.Text.Encoding.Default.GetString(state.readBuff, 0, count);
+            byte[] sendBytes = System.Text.Encoding.Default.GetBytes(receStr);
+            foreach (var VARIABLE in clients.Values)
+            {
+                VARIABLE.socket.Send(sendBytes);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            }
+        }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            AsyncServer();
+            
         }
 
 
-
-        public static Dictionary<Socket, ClientState> ClientStates = new Dictionary<Socket, ClientState>();
-        //异步服务器例子
-        static void AsyncServer()
-        {
-            Socket listen = new Socket(AddressFamily.InterNetwork,SocketType.Stream,ProtocolType.Tcp);
-            IPAddress ipAdd =  IPAddress.Parse("127.0.0.1");
-            IPEndPoint ipEnd = new IPEndPoint(ipAdd,9999);
-            listen.Bind(ipEnd);
-            listen.Listen(0);
-
-            listen.BeginAccept(AcceptCallBack, listen);
-            Console.WriteLine("[Server] Begin Accept");
-            Console.ReadLine();
-        }
-
-        static void AcceptCallBack(IAsyncResult ar)
-        {
-            try
-            {
-                Socket acceptSocket = (Socket)ar.AsyncState;
-                Socket clientSocket = acceptSocket.EndAccept(ar);
-
-                ClientState clientState = new ClientState();
-                clientState.socket = clientSocket;
-                clientState.Guid = Guid.NewGuid().ToString("N");
-                string contetn = clientState.Guid + ",0";
-                clientSocket.Send(System.Text.Encoding.Default.GetBytes(contetn));
-                foreach (var client in ClientStates)
-                {
-                    string message = clientState.Guid + ",1,Cube";
-                    byte[] bytes = System.Text.Encoding.Default.GetBytes(message);
-                    client.Value.socket.BeginSend(bytes, 0, bytes.Length, 0, SendCallBack, client.Key);
-                }
-                ClientStates.Add(clientSocket, clientState);
-                clientSocket.BeginReceive(clientState.readBuff, 0, 1024, 0, ReceiveCallBack, clientState);
-                Console.WriteLine("[Server] Accept Success Guid:" + clientState.Guid);
-                acceptSocket.BeginAccept(AcceptCallBack, acceptSocket);
-            }
-            catch (SocketException e)
-            {
-                Console.WriteLine("Accept Fail" + e);
-                throw;
-            }
-        }
-
-        static void ReceiveCallBack(IAsyncResult ar)
-        {
-            try
-            {
-                ClientState clientState = (ClientState)ar.AsyncState;
-                Socket clientSocket = clientState.socket;
-                int count = clientSocket.EndReceive(ar);
-                if (count ==0)
-                {
-                    clientSocket.Close();
-                    ClientStates.Remove(clientSocket);
-                    return;
-                }
-                string receiveStr = System.Text.Encoding.Default.GetString(clientState.readBuff, 0, count);
-                Console.WriteLine("[Server] Receive:" + receiveStr);
-                byte[] sendBytes = System.Text.Encoding.Default.GetBytes(receiveStr);
-                foreach (var item in ClientStates)
-                {
-                    item.Value.socket.BeginSend(sendBytes, 0, sendBytes.Length, 0, SendCallBack, item.Key);
-                }
-                clientSocket.BeginReceive(clientState.readBuff, 0, 1024, 0, ReceiveCallBack, clientState);
-            }
-            catch (SocketException e)
-            {
-                Console.WriteLine("[Server] Receive Fail");
-                throw;
-            }
-        }
-
-        public static void SendCallBack(IAsyncResult ar)
-        {
-            try
-            {
-                Socket socket = (Socket)ar.AsyncState;
-                socket.EndSend(ar);
-            }
-            catch (SocketException e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-        }
-
-
-        //同步服务器例子
-        static void SyncServer()
-        {
-            Console.WriteLine("Hello World!");
-
-            Socket listen = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
-            IPAddress ipAdr = IPAddress.Parse("127.0.0.1");
-            IPEndPoint ipEp = new IPEndPoint(ipAdr, 9999);
-
-            listen.Bind(ipEp);
-
-            listen.Listen(0);
-            Console.WriteLine("[Server] is Start");
-            while (true)
-            {
-                Socket connfd = listen.Accept();
-                Console.WriteLine("[Server] is Accept");
-                byte[] readBuff = new byte[1024];
-                int count = connfd.Receive(readBuff);
-                string timeContent = System.DateTime.Now.ToString();
-                string readStr = System.Text.Encoding.Default.GetString(readBuff, 0, count);
-                Console.WriteLine("[Server] Receive " + readStr);
-                byte[] sendBytes = System.Text.Encoding.Default.GetBytes(readStr + timeContent);
-                connfd.Send(sendBytes);
-            }
-        }
     }
 }

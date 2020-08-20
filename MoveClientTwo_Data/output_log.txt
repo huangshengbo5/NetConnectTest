@@ -1,4 +1,15 @@
-Initialize engine version: 5.6.6f2 (6bac21139588)
+Mono path[0] = 'E:/NetConnectTest/MoveClientTwo_Data/Managed'
+Mono path[1] = 'E:/NetConnectTest/MoveClientTwo_Data/Mono'
+Mono config path = 'E:/NetConnectTest/MoveClientTwo_Data/Mono/etc'
+PlayerConnection initialized from E:/NetConnectTest/MoveClientTwo_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55147
+Multi-casting "[IP] 192.168.5.17 [Port] 55147 [Flags] 3 [Guid] 2414608769 [EditorId] 3281692273 [Version] 1048832 [Id] WindowsPlayer(PC-20181213YXRL) [Debug] 1" to [225.0.0.222:54997]...
+Waiting for connection from host on [0.0.0.0:55147]...
+PlayerConnection accepted from [192.168.182.1] handle:0x26c
+Started listening to [0.0.0.0:55147]
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,defer=y,address=0.0.0.0:56769
+PlayerConnection already initialized - listening to [0.0.0.0:55147]
+Player data archive not found at `E:/NetConnectTest/MoveClientTwo_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.6f2 (6bac21139588)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
@@ -17,40 +28,1309 @@ Platform assembly: E:\NetConnectTest\MoveClientTwo_Data\Managed\UnityEngine.Netw
 Loading E:\NetConnectTest\MoveClientTwo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\NetConnectTest\MoveClientTwo_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading E:\NetConnectTest\MoveClientTwo_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.017 seconds
+- Completed reload, in  0.020 seconds
 Platform assembly: E:\NetConnectTest\MoveClientTwo_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\NetConnectTest\MoveClientTwo_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.956936 ms
-Send:  Enter|127.0.0.1:22931,4,0,-1,0
+UnloadTime: 1.025433 ms
+PlayerConnection accepted from [192.168.182.1] handle:0x8d8
+Send:  Enter|127.0.0.1:49975,3,0,-1,0
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+MainAccess:Start() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:38)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
 
 Send:  List|
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+MainAccess:Start() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:40)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
 
-Receive:    Enter|127.0.0.1:22931,4,0,-1,0List
+Receive:    Enter|127.0.0.1:49975,3,0,-1,0List
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 87c0 -> priority: 1 
-  Thread -> id: 3a84 -> priority: 1 
-Receive:    Enter|127.0.0.1:22941,4,0,0,0
+  Thread -> id: 3e38 -> priority: 1 
+  Thread -> id: 5cf8 -> priority: 1 
+Receive:    Enter|127.0.0.1:49991,1,0,2,0
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
 
-Other OnEnter:  127.0.0.1:22941,4,0,0,0
+Receive:    List|127.0.0.1:49975,3,3,3,3,-100,127.0.0.1:49991,1,1,1,1,-100,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
 
-System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+OnList:  127.0.0.1:49975,3,3,3,3,-100,127.0.0.1:49991,1,1,1,1,-100,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnList(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:100)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 100)
 
-  at System.Net.Sockets.Socket+SocketAsyncResult.CheckIfThrowDelayedException () [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket.EndReceive (IAsyncResult asyncResult, System.Net.Sockets.SocketError& errorCode) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket.EndReceive (IAsyncResult result) [0x00000] in <filename unknown>:0 
-  at NetManager.ReceiveCallBack (IAsyncResult ar) [0x00000] in <filename unknown>:0 
+Receive:    Attack|127.0.0.1:49991,328.3427,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,328.3427,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Move|127.0.0.1:49991,-1.806595,0,6.605164,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,-1.806595,0,6.605164,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,-0.322998,0,4.279999,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,-0.322998,0,4.279999,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Send:  Move|127.0.0.1:49975,3.622894,0,5.478958,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:29)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Move|127.0.0.1:49975,3.622894,0,5.478958,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49975,3.622894,0,5.478958,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Send:  Move|127.0.0.1:49975,-3.421585,0,7.129608,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:29)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Move|127.0.0.1:49975,-3.421585,0,7.129608,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49975,-3.421585,0,7.129608,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,2.444092,0,7.657211,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,2.444092,0,7.657211,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,-4.271469,0,2.611877,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,-4.271469,0,2.611877,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,-5.013275,0,7.757904,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,-5.013275,0,7.757904,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,-6.750961,0,2.282272,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,-6.750961,0,2.282272,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,-0.4205627,0,0.2757568,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,-0.4205627,0,0.2757568,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,-0.7180481,0,3.851974,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetManager.Update () [0x0003a] in E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:74 
+  at MainAccess.Update () [0x00001] in E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45 
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 74)
+
+Receive:    Move|127.0.0.1:49991,3.246063,0,6.789215,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,3.246063,0,6.789215,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,-2.008514,0,1.231369,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,-2.008514,0,1.231369,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,-1.311523,0,4.576157,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,-1.311523,0,4.576157,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Move|127.0.0.1:49991,-3.246033,0,6.789215,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,-3.246033,0,6.789215,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Attack|127.0.0.1:49991,108.4628,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,108.4628,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,92.21532,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,92.21532,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,76.46674,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,76.46674,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,72.04513,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,72.04513,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,57.81594,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,57.81594,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,30.5039,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,30.5039,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,331.1642,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,331.1642,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,340.4566,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,340.4566,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,344.3435,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,344.3435,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,344.3435,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,344.3435,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,344.3435,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,344.3435,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,147.8911,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,147.8911,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,147.8911,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,158.8314,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,158.8314,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,158.8314,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,176.9905,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,176.9905,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,176.9905,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,157.7283,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,157.7283,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,157.7283,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,163.0616,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,163.0616,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,163.0616,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,353.9431,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,353.9431,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,353.9431,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Move|127.0.0.1:49975,1.41626,0,11.36522,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:29)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Move|127.0.0.1:49975,1.41626,0,11.36522,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49975,1.41626,0,11.36522,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Send:  Move|127.0.0.1:49975,3.042831,0,5.975433,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:29)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Move|127.0.0.1:49975,3.042831,0,5.975433,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49975,3.042831,0,5.975433,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Send:  Move|127.0.0.1:49975,4.265457,0,5.858749,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:29)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Move|127.0.0.1:49975,4.265457,0,5.858749,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49975,4.265457,0,5.858749,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Send:  Move|127.0.0.1:49975,-2.297592,0,4.086823,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:29)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Move|127.0.0.1:49975,-2.297592,0,4.086823,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49975,-2.297592,0,4.086823,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Receive:    Attack|127.0.0.1:49991,93.57276,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,93.57276,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Attack|127.0.0.1:49991,87.87129,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49991,87.87129,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Receive:    Move|127.0.0.1:49991,2.935745,0,3.342514,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49991,2.935745,0,3.342514,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Send:  Attack|127.0.0.1:49975,118.6681,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,118.6681,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,118.6681,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,132.2611,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,132.2611,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,132.2611,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,34.66564,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,34.66564,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,34.66564,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,185.5781,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,185.5781,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,185.5781,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,128.7138,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,128.7138,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,128.7138,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Attack|127.0.0.1:49975,91.12999,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:46)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Attack|127.0.0.1:49975,91.12999,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnAttack: 127.0.0.1:49975,91.12999,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnAttack(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:126)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 126)
+
+Send:  Move|127.0.0.1:49975,2.143402,0,2.78418,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:29)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Move|127.0.0.1:49975,2.143402,0,2.78418,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49975,2.143402,0,2.78418,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Send:  Move|127.0.0.1:49975,0.9960022,0,5.591461,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:Send(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:62)
+CtrlHuman:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\CtrlHuman.cs:29)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/NetManager.cs Line: 62)
+
+Receive:    Move|127.0.0.1:49975,0.9960022,0,5.591461,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+NetManager:ReceiveCallBack(IAsyncResult) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:46)
+System.Net.Sockets.SocketAsyncResult:Complete() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:205)
+System.Net.Sockets.Worker:Receive() (at /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs:498)
+ 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 205)
+
+OnMove127.0.0.1:49975,0.9960022,0,5.591461,
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MainAccess:OnMove(String) (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:70)
+NetManager:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\NetManager.cs:79)
+MainAccess:Update() (at E:\NetConnectTest\Assets\Script\NetControllerMoveTwo\MainAccess.cs:45)
+ 
+(Filename: E:/NetConnectTest/Assets/Script/NetControllerMoveTwo/MainAccess.cs Line: 70)
+
+Waiting for finish

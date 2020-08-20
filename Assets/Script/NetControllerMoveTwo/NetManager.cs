@@ -42,6 +42,10 @@ public class NetManager
         {
             Socket socket = (Socket)ar.AsyncState;
             int count = socket.EndReceive(ar);
+            if (count  ==0 )
+            {
+                socket.Close();
+            }
             string receStr = System.Text.Encoding.Default.GetString(readBuff, 0, count);
             Debug.Log("Receive:    " + receStr);
             msgList.Add(receStr);

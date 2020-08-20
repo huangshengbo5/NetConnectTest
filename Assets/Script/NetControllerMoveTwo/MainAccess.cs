@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MainAccess : MonoBehaviour
 {
@@ -11,10 +14,11 @@ public class MainAccess : MonoBehaviour
     public Dictionary<string, BaseHuman> otherHumans = new Dictionary<string, BaseHuman>();
 	// Use this for initialization
 	void Start () {
-		NetManager.AddListener("Enter",OnEnter);
+		//NetManager.AddListener("Enter",OnEnter);
         NetManager.AddListener("Move",OnMove);
         NetManager.AddListener("Leave",OnLeave);
         NetManager.AddListener("List",OnList);
+        NetManager.AddListener("Attack",OnAttack);
         NetManager.Connect("127.0.0.1",9999);
 
         GameObject obj = Instantiate(humanPrefab);
@@ -67,10 +71,30 @@ public class MainAccess : MonoBehaviour
     {
         Debug.Log("OnMove" + str);
 
+        string[] split = str.Split(',');
+        string desc = split[0];
+        float x = float.Parse(split[1]);
+        float y = float.Parse(split[2]);
+        float z = float.Parse(split[3]);
+        if (!otherHumans.Keys.Contains(desc))
+        {
+            return;
+        }
+        BaseHuman baseHuman = otherHumans[desc];
+        Vector3 targetPos = new  Vector3(x,y,z);
+        baseHuman.MoveTo(targetPos);
     }
     public void OnLeave(string str)
     {
         Debug.Log("OnLeave" + str);
+        string[] split = str.Split(',');
+        string desc = split[0];
+        if (!otherHumans.Keys.Contains(desc))
+        {
+            return;
+        }
+        GameObject obj = otherHumans[desc].gameObject;
+        Destroy(obj);
     }
 
     public void OnList(string str)
@@ -90,13 +114,45 @@ public class MainAccess : MonoBehaviour
             {
                 continue;
             }
-
             GameObject obj = Instantiate(humanPrefab);
             obj.transform.position =  new Vector3(x,y,z);
             obj.transform.eulerAngles = new Vector3(0,eulY,0);
-            BaseHuman otherHuman = obj.GetComponent<SyncHuman>();
+            BaseHuman otherHuman = obj.AddComponent<SyncHuman>();
             otherHuman.desc = desc;
             otherHumans.Add(desc, otherHuman);
+            
         }
+    }
+
+    public void OnAttack(string str)
+    {
+        Debug.Log("OnAttack: " + str);
+        string[] split = str.Split(',');
+        string desc = split[0];
+        float eulY = float.Parse(split[1]);
+        if (!otherHumans.ContainsKey(desc))
+        {
+            return;
+        }
+        SyncHuman h = (SyncHuman) otherHumans[desc];
+        h.SyncAttack(eulY);
+    }
+
+    public void OnDie(string Args)
+    {
+        Debug.Log("OnDie: "+ Args);
+        string[] split = Args.Split(',');
+        //string attDesc = split[0];
+        string hitDesc = split[0];
+        if (hitDesc == myHuman.desc)
+        {
+            Debug.Log("GAME OVER!!!");
+        }
+        if (!otherHumans.ContainsKey(hitDesc))
+        {
+            return;
+        }
+        SyncHuman syncHuman = (SyncHuman) otherHumans[hitDesc];
+        syncHuman.gameObject.SetActive(false);
     }
 }

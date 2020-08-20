@@ -41,7 +41,7 @@ namespace NetServer
             Console.WriteLine("[Server] is Start");
 
             List<Socket> checkRead = new List<Socket>();
-
+             
             while (true)
             {
                 checkRead.Clear();

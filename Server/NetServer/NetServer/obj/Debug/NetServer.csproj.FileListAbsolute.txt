@@ -8,3 +8,4 @@ E:\NetConnectTest\Server\NetServer\NetServer\obj\Debug\NetServer.pdb
 E:\NetConnectTest\Server\NetServer\NetServer\bin\Debug\NetServer.exe
 E:\NetConnectTest\Server\NetServer\NetServer\bin\Debug\NetServer.pdb
 E:\NetConnectTest\Server\NetServer\NetServer\obj\Debug\NetServer.csprojResolveAssemblyReference.cache
+E:\NetConnectTest\Server\NetServer\NetServer\bin\Debug\NetServer.exe.config

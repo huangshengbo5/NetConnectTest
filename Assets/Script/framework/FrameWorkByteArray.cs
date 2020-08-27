@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngineInternal;
 
+//客户端收到的字节的管理器
 public class FrameWorkByteArray
 {
     private const int DEFAULT_SIZE = 1024;
@@ -56,7 +57,7 @@ public class FrameWorkByteArray
     public void ReSize(int size)
     {
         if (size < length) return;
-        if (size >initSize) return;
+        if (size > initSize) return;
 
         int n = 1;
         while (n<size)
@@ -91,6 +92,7 @@ public class FrameWorkByteArray
         readIndex = 0;
     }
 
+    //消息写入
     public int Write(byte[] bs, int offset, int count)
     {
         if (remain <count)
@@ -102,6 +104,7 @@ public class FrameWorkByteArray
         return count;
     }
 
+    //消息读取
     public int Read(byte[] bs, int offset, int count)
     {
         count = Math.Min(count, length);

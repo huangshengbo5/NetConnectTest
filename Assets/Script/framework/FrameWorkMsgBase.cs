@@ -8,12 +8,14 @@ public class FrameWorkMsgBase
 {
     public string protoName = "";
 
+    //编译为bytes
     public static byte[] Encode(FrameWorkMsgBase msgBase)
     {
         string s = JsonUtility.ToJson(msgBase);
         return System.Text.Encoding.UTF8.GetBytes(s);
     }
 
+    //反编译为 FrameWorkMsgBase
     public static FrameWorkMsgBase Decode(string protoName, byte[] bytes, int offset, int count)
     {
         string s = System.Text.Encoding.UTF8.GetString(bytes, offset, count);
@@ -29,13 +31,20 @@ public class FrameWorkMsgBase
 
         byte[] bytes = new byte[2 + len];
         bytes[0] = (byte) (len % 256);
-        bytes[1] = (byte) (len / 256);
+        bytes[1] = (byte)(len / 256);
 
         Array.Copy(nameBytes, 0, bytes, 2, len);
-        return null;
+        return bytes;
     }
 
     //解码协议名（2字节长度+ 字符串）
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="bytes">需要解析的信息</param>
+    /// <param name="offset">读取协议名称的 index 值</param>
+    /// <param name="count">协议名称占用的字节长度</param>
+    /// <returns></returns>
     public static string DecodeName(byte[] bytes, int offset, out int count)
     {
         count = 0;
@@ -45,7 +54,7 @@ public class FrameWorkMsgBase
             return "";
         }
 
-        //读取长度
+        //读取名字长度
         Int16 len = (Int16) (bytes[offset + 1] << 8 | bytes[offset]);
         if (len<=0)
         {

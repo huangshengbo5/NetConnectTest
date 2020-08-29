@@ -78,7 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\AlgorithmTest\AlgoriTestOne.cs" />
     <Compile Include="Assets\Script\AsynNetConnect.cs" />
+    <Compile Include="Assets\Script\NetChatRoomTest.cs" />
     <Compile Include="Assets\Script\NetConnect.cs" />
     <Compile Include="Assets\Script\NetControllerMove\DataCore.cs" />
     <Compile Include="Assets\Script\NetControllerMove\Main.cs" />
@@ -99,6 +101,8 @@
     <Compile Include="Assets\Script\framework\FrameWorkNetManager.cs" />
     <Compile Include="Assets\Script\framework\FrameWorkTest.cs" />
     <Compile Include="Assets\Script\framework\Proto\FWMsgMove.cs" />
+    <Compile Include="Assets\Script\framework\Proto\LoginMsg.cs" />
+    <Compile Include="Assets\Script\framework\Proto\NotepadMsg.cs" />
     <Compile Include="Assets\Script\framework\Proto\SysMsg.cs" />
     <Compile Include="Assets\ThrityPart\SapphiArt\SapphiArtchan\Scripts\AnimationManagerUI.cs" />
     <Compile Include="Assets\ThrityPart\SapphiArt\SapphiArtchan\Scripts\SapphiArtChan_AnimManager.cs" />

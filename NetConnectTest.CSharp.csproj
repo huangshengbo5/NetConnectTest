@@ -78,7 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\AlgorithmTest\AlgoriTestOne.cs" />
+    <Compile Include="Assets\Script\AlgorithmTest\AlgorithmTestOne.cs" />
     <Compile Include="Assets\Script\AsynNetConnect.cs" />
     <Compile Include="Assets\Script\NetChatRoomTest.cs" />
     <Compile Include="Assets\Script\NetConnect.cs" />
@@ -96,6 +96,11 @@
     <Compile Include="Assets\Script\NetControllerMoveTwo\NetManager.cs" />
     <Compile Include="Assets\Script\NetControllerMoveTwo\SyncHuman.cs" />
     <Compile Include="Assets\Script\ObjectPool.cs" />
+    <Compile Include="Assets\Script\SenceObjMgr.cs" />
+    <Compile Include="Assets\Script\Test\TankTest.cs" />
+    <Compile Include="Assets\Script\framework\BaseTank.cs" />
+    <Compile Include="Assets\Script\framework\CameraFollow.cs" />
+    <Compile Include="Assets\Script\framework\CtrlTank.cs" />
     <Compile Include="Assets\Script\framework\FrameWorkByteArray.cs" />
     <Compile Include="Assets\Script\framework\FrameWorkMsgBase.cs" />
     <Compile Include="Assets\Script\framework\FrameWorkNetManager.cs" />
@@ -104,6 +109,8 @@
     <Compile Include="Assets\Script\framework\Proto\LoginMsg.cs" />
     <Compile Include="Assets\Script\framework\Proto\NotepadMsg.cs" />
     <Compile Include="Assets\Script\framework\Proto\SysMsg.cs" />
+    <Compile Include="Assets\Script\framework\ResManager.cs" />
+    <Compile Include="Assets\Script\framework\TankBullet.cs" />
     <Compile Include="Assets\ThrityPart\SapphiArt\SapphiArtchan\Scripts\AnimationManagerUI.cs" />
     <Compile Include="Assets\ThrityPart\SapphiArt\SapphiArtchan\Scripts\SapphiArtChan_AnimManager.cs" />
   </ItemGroup>

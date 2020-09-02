@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\AlgorithmTest\AlgorithmTestOne.cs" />
+    <Compile Include="Assets\Script\AlgorithmTest\LengthOfLongestSubstring.cs" />
     <Compile Include="Assets\Script\AsynNetConnect.cs" />
     <Compile Include="Assets\Script\NetChatRoomTest.cs" />
     <Compile Include="Assets\Script\NetConnect.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Assets\Script\ObjectPool.cs" />
     <Compile Include="Assets\Script\SenceObjMgr.cs" />
     <Compile Include="Assets\Script\Test\TankTest.cs" />
+    <Compile Include="Assets\Script\framework\BasePanel.cs" />
     <Compile Include="Assets\Script\framework\BaseTank.cs" />
     <Compile Include="Assets\Script\framework\CameraFollow.cs" />
     <Compile Include="Assets\Script\framework\CtrlTank.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Assets\Script\framework\FrameWorkMsgBase.cs" />
     <Compile Include="Assets\Script\framework\FrameWorkNetManager.cs" />
     <Compile Include="Assets\Script\framework\FrameWorkTest.cs" />
+    <Compile Include="Assets\Script\framework\PanelManager.cs" />
     <Compile Include="Assets\Script\framework\Proto\FWMsgMove.cs" />
     <Compile Include="Assets\Script\framework\Proto\LoginMsg.cs" />
     <Compile Include="Assets\Script\framework\Proto\NotepadMsg.cs" />

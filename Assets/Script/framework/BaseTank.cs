@@ -31,6 +31,10 @@ public class BaseTank : MonoBehaviour
     //上次开火时间
     public float lastFireTime = 0;
 
+    public float hp = 100f;
+
+   
+
     public virtual void Init(string skinPath)
     {
         GameObject skinRes = ResManager.LoadPrefab(skinPath);
@@ -63,7 +67,19 @@ public class BaseTank : MonoBehaviour
         GameObject bulletObj = ObjectPool.GetInstance().CreateObj("Bullet");
         bulletObj.transform.localPosition = Vector3.zero;
         bulletObj.transform.localEulerAngles = Vector3.zero;
-        TankBullet bullet = bulletObj.AddComponent<TankBullet>();
+        rigidbody = bulletObj.GetComponent<Rigidbody>();
+        if (rigidbody == null)
+        {
+            rigidbody = bulletObj.AddComponent<Rigidbody>();
+        }
+        
+        rigidbody.useGravity = false;
+        //rigidbody.isKinematic = false;
+        TankBullet bullet = bulletObj.GetComponent<TankBullet>();
+        if (bullet == null)
+        {
+            bullet = bulletObj.AddComponent<TankBullet>();
+        }
         bullet.tank = this;
         //位置
         bullet.transform.position = firePoint.position;
@@ -76,6 +92,22 @@ public class BaseTank : MonoBehaviour
 
     public bool IsDie()
     {
-        return false;
+        return hp <= 0;
+    }
+
+    public void Attacked(float att)
+    {
+        if (IsDie())
+        {
+            return;
+        }
+
+        hp -= att;
+        if (IsDie())
+        {
+            GameObject obj = ResManager.LoadPrefab("explosion");
+            GameObject explosion = Instantiate(obj, transform.position, transform.rotation);
+            explosion.transform.SetParent(transform);
+        }
     }
 }

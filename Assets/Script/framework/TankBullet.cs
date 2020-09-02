@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class TankBullet : MonoBehaviour
 {
-
-
-    public float speed = 1f;
-
+    public float speed = 50f;
     //发射者
     public BaseTank tank;
 
@@ -16,6 +13,7 @@ public class TankBullet : MonoBehaviour
 
     private Rigidbody rigitBody;
     public float lifeTime = 10f;
+
 
 
 	// Update is called once per frame
@@ -29,7 +27,7 @@ public class TankBullet : MonoBehaviour
         GameObject collObj = collisionInfo.gameObject;
         BaseTank hitTank = collObj.GetComponent<BaseTank>();
 
-        if (collObj.tag == null || collObj.tag == "Untagged")
+        if (collObj.tag == null )
         {
             return;
         }
@@ -38,9 +36,14 @@ public class TankBullet : MonoBehaviour
         {
             return; 
         }
+
+        if (hitTank != null)
+        {
+            hitTank.Attacked(35f);
+        }
         //显示爆炸效果
         GameObject explode = ResManager.LoadPrefab("fire");
         Instantiate(explode, transform.position, transform.rotation);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

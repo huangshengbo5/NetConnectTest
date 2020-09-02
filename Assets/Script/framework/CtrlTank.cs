@@ -15,6 +15,10 @@ public class CtrlTank : BaseTank {
 
     public void MoveUpdate()
     {
+        if (IsDie())
+        {
+            return ;
+        }
         float x = Input.GetAxis("Horizontal");
         transform.Rotate(0,x*steer*Time.deltaTime,0);
 
@@ -27,6 +31,10 @@ public class CtrlTank : BaseTank {
     //旋转炮台
     public void TurrentUpdate()
     {
+        if (IsDie())
+        {
+            return;
+        }
         float axis = 0;
         if (Input.GetKey(KeyCode.Q))
         {
@@ -44,6 +52,10 @@ public class CtrlTank : BaseTank {
 
     public void FireUpdate()
     {
+        if (IsDie())
+        {
+            return;
+        }
         if (!Input.GetKey(KeyCode.Space))
         {
             return;

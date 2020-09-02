@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\AlgorithmTest\AlgorithmTestOne.cs" />
+    <Compile Include="Assets\Script\AlgorithmTest\FindMedianSortedArrays.cs" />
     <Compile Include="Assets\Script\AlgorithmTest\LengthOfLongestSubstring.cs" />
     <Compile Include="Assets\Script\AsynNetConnect.cs" />
     <Compile Include="Assets\Script\NetChatRoomTest.cs" />

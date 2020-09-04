@@ -100,6 +100,8 @@
     <Compile Include="Assets\Script\ObjectPool.cs" />
     <Compile Include="Assets\Script\SenceObjMgr.cs" />
     <Compile Include="Assets\Script\Test\TankTest.cs" />
+    <Compile Include="Assets\Script\UIMudule\Login\LoginPanel.cs" />
+    <Compile Include="Assets\Script\UIMudule\Login\TipPanel.cs" />
     <Compile Include="Assets\Script\framework\BasePanel.cs" />
     <Compile Include="Assets\Script\framework\BaseTank.cs" />
     <Compile Include="Assets\Script\framework\CameraFollow.cs" />

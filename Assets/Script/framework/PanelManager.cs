@@ -1,15 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Layer
+{
+    Panel,
+    Tip,
+}
 public static class PanelManager  {
-
-
-    public enum Layer
-    {
-        Panel,
-        Tip,
-    }
 
     private static Dictionary<Layer,Transform>layers = new Dictionary<Layer, Transform>();
 
@@ -31,11 +30,34 @@ public static class PanelManager  {
 
     public static void Open<T>(params object[] para) where T : BasePanel
     {
+        string name = typeof(T).ToString();
+        if (panels.ContainsKey(name))
+        {
+            return;
+        }
 
+        BasePanel panel = root.gameObject.AddComponent<T>();
+        panel.OnInit();
+        panel.Init();
+
+        Transform layer = layers[panel.layer];
+        panel.skin.transform.SetParent(layer,false);
+        panels.Add(name,panel);
+        panel.OnShow(para);
     }
+
     public static void Close(string name)
     {
+        if (!panels.ContainsKey(name))
+        {
+            return;
+        }
 
+        BasePanel panel = panels[name];
+        panel.OnClose();
+        panels.Remove(name);
+        GameObject.Destroy(panel.skin);
+        Component.Destroy(panel);
     }
     
 }

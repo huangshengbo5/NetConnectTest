@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Assets.Script.framework.Proto
+
+class MsgLogin : FrameWorkMsgBase
 {
-    class LoginMsg
+    public MsgLogin()
     {
+        protoName = "MsgLogin";
     }
+    public string id;
+    public string pw;
+    public int result;
 }

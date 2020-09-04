@@ -9,6 +9,7 @@ public class BasePanel : MonoBehaviour
     public string skinPath;
 
     public GameObject skin;
+    public Layer layer;
 
     public void Init()
     {

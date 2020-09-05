@@ -109,6 +109,9 @@ Assets/Script/NetControllerMoveTwo/SyncHuman.cs
 Assets/Script/ObjectPool.cs
 Assets/Script/SenceObjMgr.cs
 Assets/Script/Test/TankTest.cs
+Assets/Script/UIMudule/Login/LoginPanel.cs
+Assets/Script/UIMudule/Login/RegisterPanel.cs
+Assets/Script/UIMudule/Login/TipPanel.cs
 Assets/Script/framework/BasePanel.cs
 Assets/Script/framework/BaseTank.cs
 Assets/Script/framework/CameraFollow.cs

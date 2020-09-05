@@ -82,6 +82,7 @@
     <Compile Include="Assets\Script\AlgorithmTest\FindMedianSortedArrays.cs" />
     <Compile Include="Assets\Script\AlgorithmTest\LengthOfLongestSubstring.cs" />
     <Compile Include="Assets\Script\AsynNetConnect.cs" />
+    <Compile Include="Assets\Script\GameMain.cs" />
     <Compile Include="Assets\Script\NetChatRoomTest.cs" />
     <Compile Include="Assets\Script\NetConnect.cs" />
     <Compile Include="Assets\Script\NetControllerMove\DataCore.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Script\SenceObjMgr.cs" />
     <Compile Include="Assets\Script\Test\TankTest.cs" />
     <Compile Include="Assets\Script\UIMudule\Login\LoginPanel.cs" />
+    <Compile Include="Assets\Script\UIMudule\Login\RegisterPanel.cs" />
     <Compile Include="Assets\Script\UIMudule\Login\TipPanel.cs" />
     <Compile Include="Assets\Script\framework\BasePanel.cs" />
     <Compile Include="Assets\Script\framework\BaseTank.cs" />

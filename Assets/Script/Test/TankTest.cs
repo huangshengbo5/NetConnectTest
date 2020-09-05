@@ -22,6 +22,7 @@ using UnityEngine;
 
             PanelManager.Init();
             PanelManager.Open<LoginPanel>();
+            PanelManager.Open<TipPanel>("用户密码错误");
         }
 
         void Update()

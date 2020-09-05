@@ -60,7 +60,7 @@ public class LoginPanel : BasePanel
 
     public void OnRegClick()
     {
-
+        PanelManager.Open<RegisterPanel>();
     }
 
     public void OnMsgLogin(FrameWorkMsgBase msgBase)
@@ -74,6 +74,7 @@ public class LoginPanel : BasePanel
             CtrlTank ctrlTank = tankObj.AddComponent<CtrlTank>();
             ctrlTank.Init("tankPrefab");
             tankObj.AddComponent<CameraFollow>();
+            GameMain.id = msgLogin.id;
             Close();
         }
         else

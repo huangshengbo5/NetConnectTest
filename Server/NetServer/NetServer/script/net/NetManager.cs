@@ -7,8 +7,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Reflection;
 
-namespace NetServer.script.net
-{
+
     class NetManager
     {
         //监听socket
@@ -252,4 +251,3 @@ namespace NetServer.script.net
             return Convert.ToInt64(ts.TotalSeconds);
         }
     }
-}

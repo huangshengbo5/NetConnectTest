@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetServer.script.logic
-{
+
     class PlayerManager
     {
 
@@ -37,4 +36,4 @@ namespace NetServer.script.logic
             players.Remove(id);
         }
     }
-}
+

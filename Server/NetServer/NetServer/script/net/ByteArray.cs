@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetServer.script.net
-{
+
     class ByteArray
     {
             private const int DEFAULT_SIZE = 1024;
@@ -130,4 +129,4 @@ namespace NetServer.script.net
         return ret;
     }
     }
-}
+

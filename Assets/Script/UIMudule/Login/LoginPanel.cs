@@ -75,6 +75,8 @@ public class LoginPanel : BasePanel
             ctrlTank.Init("tankPrefab");
             tankObj.AddComponent<CameraFollow>();
             GameMain.id = msgLogin.id;
+            //打开房间列表界面
+            PanelManager.Open<RoomListPanel>();
             Close();
         }
         else

@@ -2,17 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NetServer.script.net;
 
-namespace NetServer.script.logic
-{
-    class Player
+
+class Player
     {
         public string id = "";
         public ClientState state;
+        //坐标和旋转
         public int x;
         public int y;
         public int z;
+        public float ex;
+        public float ey;
+        public float ez;
+
+        //房间号
+        public int roomId = -1;
+        //阵营
+        public int camp = 1;
+        //坦克生命值
+        public int hp = 100;
+
 
         //数据库数据
         public PlayerData data;
@@ -27,4 +37,4 @@ namespace NetServer.script.logic
             NetManager.Send(state,msgBase);
         }
     }
-}
+

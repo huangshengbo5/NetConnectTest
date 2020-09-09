@@ -61,6 +61,10 @@
     <Compile Include="script\logic\Player.cs" />
     <Compile Include="script\logic\PlayerData.cs" />
     <Compile Include="script\logic\PlayerManager.cs" />
+    <Compile Include="script\logic\Room.cs" />
+    <Compile Include="script\logic\RoomManager.cs" />
+    <Compile Include="script\logic\RoomMsg.cs" />
+    <Compile Include="script\logic\RoomMsgHandle.cs" />
     <Compile Include="script\logic\SysMsgHandler.cs" />
     <Compile Include="script\net\ByteArray.cs" />
     <Compile Include="script\net\ClientState.cs" />

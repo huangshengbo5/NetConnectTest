@@ -5,22 +5,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-//class MsgGetRoomList :MsgBase
-//{
-//    public MsgGetRoomList()
-//    {
-//        protoName = "MsgGetRoomList";
-//    }
-//    public RoomInfo[] rooms;
-//}
-
-//class RoomInfo
-//{
-//    public int id = 0;
-//    public int count = 0;
-//    public int status = 0;
-//}
-
 class RoomManager
 {
 
@@ -66,7 +50,6 @@ class RoomManager
             roomInfo.status = (int) room.status;
             msg.rooms[i] = roomInfo;
         }
-
         return msg;
     }
 }

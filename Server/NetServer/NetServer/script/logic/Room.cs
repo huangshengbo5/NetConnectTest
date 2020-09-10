@@ -7,23 +7,6 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 
 
-//class MsgGetRoomInfo : MsgBase
-//{
-//    public MsgGetRoomInfo()
-//    {
-//        protoName = "MsgGetRoomInfo";
-//    }
-//    public PlayerInfo[] players;
-//}
-
-//class PlayerInfo
-//{
-//    public string id = "ipy";
-//    public int camp = 0;
-//    public int win = 0;
-//    public int lost = 0;
-//    public int isOwner = 0;
-//}
 class Room
 {
     public int id = 0;
@@ -75,7 +58,7 @@ class Room
         }
 
         //todo 
-        //Broadcast(ToMsg());
+        Broadcast(ToMsg());
         return true;
     }
 
@@ -108,7 +91,7 @@ class Room
         {
             RoomManager.RemoveRoom(this.id);
         }
-        //Broadcast(ToMsg());
+        Broadcast(ToMsg());
         return true;
     }
 

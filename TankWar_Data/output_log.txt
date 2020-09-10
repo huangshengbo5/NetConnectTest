@@ -1,0 +1,42 @@
+Mono path[0] = 'E:/NetConnectTest/TankWar_Data/Managed'
+Mono path[1] = 'E:/NetConnectTest/TankWar_Data/Mono'
+Mono config path = 'E:/NetConnectTest/TankWar_Data/Mono/etc'
+PlayerConnection initialized from E:/NetConnectTest/TankWar_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55320
+Multi-casting "[IP] 192.168.5.17 [Port] 55320 [Flags] 3 [Guid] 126341508 [EditorId] 1951275093 [Version] 1048832 [Id] WindowsPlayer(PC-20181213YXRL) [Debug] 1" to [225.0.0.222:54997]...
+Waiting for connection from host on [0.0.0.0:55320]...
+PlayerConnection accepted from [192.168.182.1] handle:0x26c
+Started listening to [0.0.0.0:55320]
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,defer=y,address=0.0.0.0:56508
+PlayerConnection already initialized - listening to [0.0.0.0:55320]
+Player data archive not found at `E:/NetConnectTest/TankWar_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.6f2 (6bac21139588)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 1030 (ID=0x1d01)
+    Vendor:   NVIDIA
+    VRAM:     1959 MB
+    Driver:   23.21.13.9101
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\NetConnectTest\TankWar_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\NetConnectTest\TankWar_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\NetConnectTest\TankWar_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\NetConnectTest\TankWar_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\NetConnectTest\TankWar_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\NetConnectTest\TankWar_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\NetConnectTest\TankWar_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\NetConnectTest\TankWar_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\NetConnectTest\TankWar_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading E:\NetConnectTest\TankWar_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.019 seconds
+Platform assembly: E:\NetConnectTest\TankWar_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\NetConnectTest\TankWar_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.076247 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 6cc4 -> priority: 1 
+  Thread -> id: 9d7c -> priority: 1 
+Waiting for finish

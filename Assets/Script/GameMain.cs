@@ -10,8 +10,10 @@ public class GameMain : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		FrameWorkNetManager.AddEventListener(NetEvent.Close,OnConnectClose);
+        FrameWorkNetManager.AddEventListener(NetEvent.ConnectSucc, OnConnectSucc);
+        FrameWorkNetManager.AddEventListener(NetEvent.ConnectFail, OnConnectFail);
         FrameWorkNetManager.AddMsgListener("MsgKick",OnMsgKick);
-
+        FrameWorkNetManager.Connect("127.0.0.1",8888);
         PanelManager.Init();
         PanelManager.Open<LoginPanel>();
 	}
@@ -29,5 +31,16 @@ public class GameMain : MonoBehaviour
     public void OnMsgKick(FrameWorkMsgBase msgBase)
     {
         PanelManager.Open<TipPanel>("被踢下线");
+    }
+
+
+    public static void OnConnectSucc(string str)
+    {
+        Debug.Log("Connect Successful");
+    }
+
+    public static void OnConnectFail(string str)
+    {
+        Debug.Log("Connect Fail");
     }
 }

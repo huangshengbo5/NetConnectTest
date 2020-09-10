@@ -26,7 +26,7 @@ using System.Reflection;
         {
             listenfd = new Socket(AddressFamily.InterNetwork,SocketType.Stream,ProtocolType.Tcp);
 
-            IPAddress ipAdr = IPAddress.Parse("0.0.0.0");
+            IPAddress ipAdr = IPAddress.Parse("127.0.0.1");
             IPEndPoint ipEp = new IPEndPoint(ipAdr,listenPort);
 
             listenfd.Bind(ipEp);
@@ -75,6 +75,7 @@ using System.Reflection;
                 Console.WriteLine("Accept "+ clientfd.RemoteEndPoint.ToString());
                 ClientState state = new ClientState();
                 state.socket = clientfd;
+                state.lastPingTime = GetTimeStamp();
                 clients.Add(clientfd, state);
             }
             catch (SocketException e)
@@ -150,7 +151,7 @@ using System.Reflection;
                 return;
             }
 
-            Int16 bodyLength = (Int16) ((bytes[readBuff.readIndex + 1 << 8]) | bytes[readBuff.readIndex]);
+            Int16 bodyLength = (Int16) ((bytes[readBuff.readIndex + 1 ]<<8) | bytes[readBuff.readIndex]);
 
             //消息体
             if (readBuff.length<bodyLength)

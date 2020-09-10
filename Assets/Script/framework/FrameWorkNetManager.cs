@@ -104,6 +104,7 @@ public class FrameWorkNetManager
             FireEvent(NetEvent.ConnectSucc,"");
             
             isConnecting = false;
+            socket.BeginReceive(readBuff.bytes, readBuff.writeIndex, readBuff.remain, 0, ReceiveCallBack, socket);
         }
         catch (SocketException e)
         {

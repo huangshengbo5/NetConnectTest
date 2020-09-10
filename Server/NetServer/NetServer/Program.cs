@@ -7,21 +7,6 @@ using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Security.AccessControl;
-using NetServer.script.logic;
-using NetServer.script.net;
-
-namespace NetServer
-{
-    //class ClientState
-    //{
-    //    public Socket socket;
-    //    public  byte [] readBuff = new byte[1024];
-    //    public int hp = -100;
-    //    public float x = 0;
-    //    public float y = 0;
-    //    public float z = 0;
-    //    public float euly = 0;
-    //}
 
     class Program
     {
@@ -43,17 +28,15 @@ namespace NetServer
             //    Console.WriteLine("创角成功");
 
             //}
-
-            DbManager.CreatePlayer("hsb");
-            PlayerData pd = DbManager.GetPlayerData("hsb");
-            if (pd != null)
-            {
-                pd.coin = 100;
-                DbManager.UpdatePlayerData("aglab", pd);
-            }
-
+            //DbManager.CreatePlayer("hsb");
+            //PlayerData pd = DbManager.GetPlayerData("hsb");
+            //if (pd != null)
+            //{
+            //    pd.coin = 100;
+            //    DbManager.UpdatePlayerData("aglab", pd);
+            //}
+            NetManager.StartLoop(8888);
             Console.ReadLine();
-
         }
 
         //private static Socket listenFd;
@@ -160,4 +143,3 @@ namespace NetServer
         //    state.socket.Send(sendMsg);
         //}
     }
-}

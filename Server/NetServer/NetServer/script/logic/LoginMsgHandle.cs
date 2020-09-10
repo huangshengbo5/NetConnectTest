@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-partial class MsgHandler
+partial class SysMsgHandler
 {
     public static void MsgRegister(ClientState c, MsgBase msgBase)
     {
@@ -24,7 +24,7 @@ partial class MsgHandler
     public static void MsgLogin(ClientState c, MsgBase msgBase)
     {
         MsgLogin msg = (MsgLogin)msgBase;
-        if (!DbManager.CheckPassword(msg.id, msg.pw))
+        if (DbManager.CheckPassword(msg.id, msg.pw))
         {
             msg.result = 1;
             NetManager.Send(c,msg);

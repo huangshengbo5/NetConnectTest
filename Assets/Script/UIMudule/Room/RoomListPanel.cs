@@ -28,7 +28,7 @@ public class RoomListPanel : BasePanel {
     public override void OnShow(params object[] para)
     {
         idText = skin.transform.Find("InfoPanel/IdText").GetComponent<Text>();
-        scoreText = skin.transform.Find("InfoPanel/scoreText").GetComponent<Text>();
+        scoreText = skin.transform.Find("InfoPanel/ScoreText").GetComponent<Text>();
         createButton = skin.transform.Find("CtrlPanel/CreateButton").GetComponent<Button>();
         reflashButton = skin.transform.Find("CtrlPanel/ReflashButton").GetComponent<Button>();
 

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NetServer.script.logic;
-using NetServer.script.net;
 
 partial class MsgHandler
 {

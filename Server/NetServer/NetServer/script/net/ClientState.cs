@@ -14,7 +14,4 @@ class ClientState
 
     //玩家
     public Player player;
-
 }
-    
-

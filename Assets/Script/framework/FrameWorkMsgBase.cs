@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using Newtonsoft.Json;
 
+[Serializable]
 public class FrameWorkMsgBase
 {
     public string protoName = "";
@@ -11,7 +13,8 @@ public class FrameWorkMsgBase
     //编译为bytes
     public static byte[] Encode(FrameWorkMsgBase msgBase)
     {
-        string s = JsonUtility.ToJson(msgBase);
+        //string s =  JsonUtility.ToJson(msgBase);
+        string s =  JsonConvert.SerializeObject(msgBase);
         return System.Text.Encoding.UTF8.GetBytes(s);
     }
 
@@ -19,7 +22,8 @@ public class FrameWorkMsgBase
     public static FrameWorkMsgBase Decode(string protoName, byte[] bytes, int offset, int count)
     {
         string s = System.Text.Encoding.UTF8.GetString(bytes, offset, count);
-        FrameWorkMsgBase msgBase = (FrameWorkMsgBase) JsonUtility.FromJson(s, Type.GetType(protoName));
+        //FrameWorkMsgBase msgBase = (FrameWorkMsgBase) JsonUtility.FromJson(s, Type.GetType(protoName));
+        FrameWorkMsgBase msgBase = (FrameWorkMsgBase)JsonConvert.DeserializeObject(s, Type.GetType(protoName));
         return msgBase;
     }
 

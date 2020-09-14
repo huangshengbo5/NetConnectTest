@@ -100,3 +100,47 @@ public class MsgStartBattle : FrameWorkMsgBase
 
     public int result = 0;
 }
+
+
+public class TankInfo
+{
+    public string id = "";
+    public int camp = 0;
+    public int hp = 0;
+    public float x = 0;
+    public float y = 0;
+    public float z = 0;
+    public float ex = 0;
+    public float ey = 0;
+    public float ez = 0;
+}
+public class MsgEnterBattle : FrameWorkMsgBase
+{
+    public MsgEnterBattle()
+    {
+        protoName = "MsgEnterBattle";
+    }
+
+    public TankInfo[] tanks;
+    public int mapId = 1;
+}
+
+public class MsgBattleResult : FrameWorkMsgBase
+{
+    public MsgBattleResult()
+    {
+        protoName = "MsgBattleResult";
+    }
+
+    public int winCamp = 0;
+}
+
+public class MsgLeaveBattle : FrameWorkMsgBase
+{
+    public MsgLeaveBattle()
+    {
+        protoName = "MsgLeaveBattle";
+    }
+
+    public string id = "";
+}

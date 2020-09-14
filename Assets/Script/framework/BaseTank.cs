@@ -31,7 +31,8 @@ public class BaseTank : MonoBehaviour
     public float lastFireTime = 0;
 
     public float hp = 100f;
-
+    public string id = "";
+    public int camp = 0;
    
 
     public virtual void Init(string skinPath)

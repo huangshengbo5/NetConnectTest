@@ -15,6 +15,7 @@ public class GameMain : MonoBehaviour
         FrameWorkNetManager.AddMsgListener("MsgKick",OnMsgKick);
         FrameWorkNetManager.Connect("127.0.0.1",8888);
         PanelManager.Init();
+        BattleManager.Init();
         PanelManager.Open<LoginPanel>();
 	}
 	

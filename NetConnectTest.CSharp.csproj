@@ -106,11 +106,13 @@
     <Compile Include="Assets\Script\Test\TankTest.cs" />
     <Compile Include="Assets\Script\UIMudule\Login\LoginPanel.cs" />
     <Compile Include="Assets\Script\UIMudule\Login\RegisterPanel.cs" />
+    <Compile Include="Assets\Script\UIMudule\Login\ResultPanel.cs" />
     <Compile Include="Assets\Script\UIMudule\Login\TipPanel.cs" />
     <Compile Include="Assets\Script\UIMudule\Room\RoomListPanel.cs" />
     <Compile Include="Assets\Script\UIMudule\Room\RoomPanel.cs" />
     <Compile Include="Assets\Script\framework\BasePanel.cs" />
     <Compile Include="Assets\Script\framework\BaseTank.cs" />
+    <Compile Include="Assets\Script\framework\BattleManager.cs" />
     <Compile Include="Assets\Script\framework\CameraFollow.cs" />
     <Compile Include="Assets\Script\framework\CtrlTank.cs" />
     <Compile Include="Assets\Script\framework\FrameWorkByteArray.cs" />
@@ -124,6 +126,7 @@
     <Compile Include="Assets\Script\framework\Proto\RoomMsg.cs" />
     <Compile Include="Assets\Script\framework\Proto\SysMsg.cs" />
     <Compile Include="Assets\Script\framework\ResManager.cs" />
+    <Compile Include="Assets\Script\framework\SyncTank.cs" />
     <Compile Include="Assets\Script\framework\TankBullet.cs" />
     <Compile Include="Assets\ThrityPart\SapphiArt\SapphiArtchan\Scripts\AnimationManagerUI.cs" />
     <Compile Include="Assets\ThrityPart\SapphiArt\SapphiArtchan\Scripts\SapphiArtChan_AnimManager.cs" />

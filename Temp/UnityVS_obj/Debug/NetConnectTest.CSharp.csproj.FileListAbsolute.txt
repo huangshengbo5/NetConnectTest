@@ -20,3 +20,4 @@ E:\NetConnectTest\Temp\UnityVS_bin\Debug\UnityEditor.xml
 E:\NetConnectTest\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
 E:\NetConnectTest\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb
 E:\NetConnectTest\Temp\UnityVS_obj\Debug\NetConnectTest.CSharp.csprojResolveAssemblyReference.cache
+E:\NetConnectTest\Temp\UnityVS_bin\Debug\Newtonsoft.Json.dll

@@ -12,8 +12,55 @@ public class BattleManager  {
          FrameWorkNetManager.AddMsgListener("MsgEnterBattle",OnMsgEnterBattle);
          FrameWorkNetManager.AddMsgListener("MsgBattleResult", OnMsgBattleResult);
          FrameWorkNetManager.AddMsgListener("MsgLeaveBattle", OnMsgLeaveBattle);
+         FrameWorkNetManager.AddMsgListener("MsgSyncTank", OnMsgSyncTank);
+         FrameWorkNetManager.AddMsgListener("MsgFire", OnMsgFire);
+         FrameWorkNetManager.AddMsgListener("MsgHit", OnMsgHit);
      }
 
+     public static void OnMsgSyncTank(FrameWorkMsgBase msgBase)
+     {
+         MsgSyncTank msg = (MsgSyncTank) msgBase;
+         if (msg.id == GameMain.id)
+         {
+             return;
+         }
+
+         SyncTank tank = (SyncTank) GetTank(msg.id);
+         if (tank == null)
+         {
+             return;
+         }
+
+         tank.SyncPos(msg);
+     }
+
+     public static void OnMsgFire(FrameWorkMsgBase msgBase)
+     {
+         MsgFire msg = (MsgFire) msgBase;
+         if (msg.id == GameMain.id)
+         {
+             return;
+         }
+
+         SyncTank tank = (SyncTank) GetTank(msg.id);
+         if (tank == null)
+         {
+             return;
+         }
+
+         tank.SyncFire(msg);
+     }
+
+     public static void OnMsgHit(FrameWorkMsgBase msgBase)
+     {
+         MsgHit msg = (MsgHit) msgBase;
+         BaseTank tank = GetTank(msg.targetId);
+         if (tank == null)
+         {
+             return;
+         }
+         tank.Attacked(msg.damage);
+     }
 
      public static void OnMsgEnterBattle(FrameWorkMsgBase msgBase)
      {

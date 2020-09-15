@@ -124,6 +124,7 @@
     <Compile Include="Assets\Script\framework\Proto\LoginMsg.cs" />
     <Compile Include="Assets\Script\framework\Proto\NotepadMsg.cs" />
     <Compile Include="Assets\Script\framework\Proto\RoomMsg.cs" />
+    <Compile Include="Assets\Script\framework\Proto\SyncMsg.cs" />
     <Compile Include="Assets\Script\framework\Proto\SysMsg.cs" />
     <Compile Include="Assets\Script\framework\ResManager.cs" />
     <Compile Include="Assets\Script\framework\SyncTank.cs" />

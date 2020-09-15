@@ -39,11 +39,32 @@ public class TankBullet : MonoBehaviour
 
         if (hitTank != null)
         {
-            hitTank.Attacked(35f);
+            //hitTank.Attacked(35f);
+            SendMsgHit(tank, hitTank);
         }
         //显示爆炸效果
-        GameObject explode = ResManager.LoadPrefab("fire");
-        Instantiate(explode, transform.position, transform.rotation);
-        gameObject.SetActive(false);
+        //GameObject explode = ResManager.LoadPrefab("fire");
+        //Instantiate(explode, transform.position, transform.rotation);
+        //gameObject.SetActive(false);
+    }
+
+    public void SendMsgHit(BaseTank tank, BaseTank hitTank)
+    {
+        if (hitTank==null || tank == null)
+        {
+            return;
+        }
+
+        if (tank.id != GameMain.id)
+        {
+            return;
+        }
+        MsgHit msg = new MsgHit();
+        msg.targetId = hitTank.id;
+        msg.id = tank.id;
+        msg.x = transform.position.x;
+        msg.y = transform.position.y;
+        msg.z = transform.position.z;
+        FrameWorkNetManager.Send(msg);
     }
 }

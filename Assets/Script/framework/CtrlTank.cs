@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CtrlTank : BaseTank {
+public class CtrlTank : BaseTank
+{
+
+    private float lastSendSyncTime = 0;
+
+    public static float syncInterval = 0.1f;
 
 	// Update is called once per frame
 	new void Update ()
@@ -11,6 +16,7 @@ public class CtrlTank : BaseTank {
         MoveUpdate();
         TurrentUpdate();
         FireUpdate();
+        SyncUpdate();
     }
 
     public void MoveUpdate()
@@ -65,6 +71,33 @@ public class CtrlTank : BaseTank {
         {
             return;
         }
-        Fire();
+        TankBullet bullet =  Fire();
+        MsgFire msg = new MsgFire();
+        msg.x = bullet.transform.position.x;
+        msg.y = bullet.transform.position.y;
+        msg.z = bullet.transform.position.z;
+        msg.ex = bullet.transform.eulerAngles.x;
+        msg.ey = bullet.transform.eulerAngles.y;
+        msg.ez = bullet.transform.eulerAngles.z;
+        FrameWorkNetManager.Send(msg);
+    }
+
+    public void SyncUpdate()
+    {
+        if (Time.time -lastSendSyncTime >syncInterval)
+        {
+            return;
+        }
+
+        lastSendSyncTime = Time.time;
+        MsgSyncTank msg = new MsgSyncTank();
+        msg.x = transform.position.x;
+        msg.y = transform.position.y;
+        msg.z = transform.position.z;
+        msg.ex = transform.eulerAngles.x;
+        msg.ey = transform.eulerAngles.y;
+        msg.ez = transform.eulerAngles.z;
+        msg.turretY = turret.localEulerAngles.y;
+        FrameWorkNetManager.Send(msg);
     }
 }

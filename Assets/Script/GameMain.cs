@@ -22,6 +22,7 @@ public class GameMain : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 		FrameWorkNetManager.Update();
+        ObjectPool.GetInstance().Update();
 	}
 
     public void OnConnectClose(string str)

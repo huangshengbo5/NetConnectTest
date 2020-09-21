@@ -15,7 +15,7 @@ class Player
         public float ex;
         public float ey;
         public float ez;
-
+        public float turretY;
         //房间号
         public int roomId = -1;
         //阵营

@@ -5,7 +5,6 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
-using NetServer.script.logic;
 
 class DbManager
     {

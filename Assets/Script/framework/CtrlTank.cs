@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class CtrlTank : BaseTank
 {
-
-    private float lastSendSyncTime = 0;
-
     public static float syncInterval = 0.1f;
 
 	// Update is called once per frame
@@ -84,7 +81,7 @@ public class CtrlTank : BaseTank
 
     public void SyncUpdate()
     {
-        if (Time.time -lastSendSyncTime >syncInterval)
+        if (Time.time -lastSendSyncTime < syncInterval)
         {
             return;
         }

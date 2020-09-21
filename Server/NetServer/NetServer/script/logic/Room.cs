@@ -303,6 +303,7 @@ class Room
             i++;
         }
         Broadcast(msg);
+        lastJudgeTime = NetManager.GetTimeStamp();
         return true;
     }
 

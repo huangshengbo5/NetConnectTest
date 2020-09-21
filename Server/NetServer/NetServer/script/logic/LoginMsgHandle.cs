@@ -106,6 +106,7 @@ partial class SysMsgHandler
         player.ex = msg.ex;
         player.ey = msg.ey;
         player.ez = msg.ez;
+        player.turretY = msg.turretY;
         msg.id = player.id;
         room.Broadcast(msg);
     }

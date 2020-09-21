@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-partial class EventHandler
+partial class SysMsgHandler
 {
     public static void MsgStartBattle(ClientState c, MsgBase msgBase)
     {

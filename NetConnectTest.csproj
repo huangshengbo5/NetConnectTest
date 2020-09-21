@@ -51,42 +51,90 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.6.f2/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.6.f2/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.6.f2/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.6.f2/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.6.f2/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.6.f2/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.6.f2/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.6.f2/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.6.f2/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\AlgorithmTest\AlgorithmTestOne.cs" />
+    <Compile Include="Assets\Script\AlgorithmTest\FindMedianSortedArrays.cs" />
+    <Compile Include="Assets\Script\AlgorithmTest\LengthOfLongestSubstring.cs" />
     <Compile Include="Assets\Script\AsynNetConnect.cs" />
+    <Compile Include="Assets\Script\GameMain.cs" />
+    <Compile Include="Assets\Script\NetChatRoomTest.cs" />
     <Compile Include="Assets\Script\NetConnect.cs" />
+    <Compile Include="Assets\Script\NetControllerMove\DataCore.cs" />
+    <Compile Include="Assets\Script\NetControllerMove\Main.cs" />
     <Compile Include="Assets\Script\NetControllerMove\Move.cs" />
     <Compile Include="Assets\Script\NetControllerMove\MoveBase.cs" />
     <Compile Include="Assets\Script\NetControllerMove\MoveNetManager.cs" />
     <Compile Include="Assets\Script\NetControllerMove\MoveNetPlayer.cs" />
     <Compile Include="Assets\Script\NetControllerMove\MovePlayer.cs" />
     <Compile Include="Assets\Script\NetControllerMove\Uitil.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\BaseHuman.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\CtrlHuman.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\MainAccess.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\NetManager.cs" />
+    <Compile Include="Assets\Script\NetControllerMoveTwo\SyncHuman.cs" />
+    <Compile Include="Assets\Script\ObjectPool.cs" />
+    <Compile Include="Assets\Script\SenceObjMgr.cs" />
+    <Compile Include="Assets\Script\Test\TankTest.cs" />
+    <Compile Include="Assets\Script\UIMudule\Login\LoginPanel.cs" />
+    <Compile Include="Assets\Script\UIMudule\Login\RegisterPanel.cs" />
+    <Compile Include="Assets\Script\UIMudule\Login\ResultPanel.cs" />
+    <Compile Include="Assets\Script\UIMudule\Login\TipPanel.cs" />
+    <Compile Include="Assets\Script\UIMudule\Room\RoomListPanel.cs" />
+    <Compile Include="Assets\Script\UIMudule\Room\RoomPanel.cs" />
+    <Compile Include="Assets\Script\framework\BasePanel.cs" />
+    <Compile Include="Assets\Script\framework\BaseTank.cs" />
+    <Compile Include="Assets\Script\framework\BattleManager.cs" />
+    <Compile Include="Assets\Script\framework\CameraFollow.cs" />
+    <Compile Include="Assets\Script\framework\CtrlTank.cs" />
+    <Compile Include="Assets\Script\framework\FrameWorkByteArray.cs" />
+    <Compile Include="Assets\Script\framework\FrameWorkMsgBase.cs" />
+    <Compile Include="Assets\Script\framework\FrameWorkNetManager.cs" />
+    <Compile Include="Assets\Script\framework\FrameWorkTest.cs" />
+    <Compile Include="Assets\Script\framework\PanelManager.cs" />
+    <Compile Include="Assets\Script\framework\Proto\FWMsgMove.cs" />
+    <Compile Include="Assets\Script\framework\Proto\LoginMsg.cs" />
+    <Compile Include="Assets\Script\framework\Proto\NotepadMsg.cs" />
+    <Compile Include="Assets\Script\framework\Proto\RoomMsg.cs" />
+    <Compile Include="Assets\Script\framework\Proto\SyncMsg.cs" />
+    <Compile Include="Assets\Script\framework\Proto\SysMsg.cs" />
+    <Compile Include="Assets\Script\framework\ResManager.cs" />
+    <Compile Include="Assets\Script\framework\SyncTank.cs" />
+    <Compile Include="Assets\Script\framework\TankBullet.cs" />
+    <Compile Include="Assets\ThrityPart\SapphiArt\SapphiArtchan\Scripts\AnimationManagerUI.cs" />
+    <Compile Include="Assets\ThrityPart\SapphiArt\SapphiArtchan\Scripts\SapphiArtChan_AnimManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\ThrityPart\Stylized Nature Environment\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Sence/AlgorithmTest.unity
+- path: Assets/Sence/TankWar.unity
   isLoaded: 1
   isActive: 1

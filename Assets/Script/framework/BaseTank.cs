@@ -33,6 +33,8 @@ public class BaseTank : MonoBehaviour
     public float hp = 100f;
     public string id = "";
     public int camp = 0;
+
+    public float lastSendSyncTime = 0;
    
 
     public virtual void Init(string skinPath)
@@ -50,6 +52,7 @@ public class BaseTank : MonoBehaviour
         turret = skin.transform.Find("Turret");
         gun = turret.transform.Find("Gun");
         firePoint = gun.transform.Find("FirePoint");
+        lastSendSyncTime = Time.time;
     }
 
     public void Update()

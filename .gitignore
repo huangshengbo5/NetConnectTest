@@ -1,2 +1,5 @@
-/Library
 /Temp
+/Library
+*.idea
+/Server/NetServer/NetServer/obj/Debug/
+/obj/Debug/

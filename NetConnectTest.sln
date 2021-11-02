@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetConnectTest.CSharp", "NetConnectTest.CSharp.csproj", "{EC1B836E-88D2-1A28-1B9B-CE532CEAD527}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{E369F432-9E84-58F8-2A1E-B16D38C72B7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EC1B836E-88D2-1A28-1B9B-CE532CEAD527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC1B836E-88D2-1A28-1B9B-CE532CEAD527}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC1B836E-88D2-1A28-1B9B-CE532CEAD527}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC1B836E-88D2-1A28-1B9B-CE532CEAD527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E369F432-9E84-58F8-2A1E-B16D38C72B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E369F432-9E84-58F8-2A1E-B16D38C72B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E369F432-9E84-58F8-2A1E-B16D38C72B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E369F432-9E84-58F8-2A1E-B16D38C72B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
